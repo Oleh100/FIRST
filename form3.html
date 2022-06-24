@@ -5,9 +5,8 @@
     <style>
         div{
             display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
+            flex-direction:row
+            justify-content:flex-start;
             margin:10px;
         }
         #header {
@@ -15,19 +14,20 @@
             display: flex ;
             justify-content: flex-end;
             align-items:flex-end;
-            padding: 20px;        
+            padding: 20px;
+      
+           
         }
-       
-        button{
+
+        button {
             height: 40px;
             width: 100px;
-            float:right;
+            float: right;
             margin: 10px;
             color: black;
             font-weight: bold;
-            background:none;
+            background: none;
             border: none;
-           
         }
         #text {
             background-color: white;
@@ -41,25 +41,17 @@
             cursor: pointer;
             border: 1px solid grey;
         }
-        #buttons{
-            display:flex;
-            flex-direction:row;
-            margin: 15px;
-            padding: 15px;   
-        }
-        input{
-            border:outset;
+        input {
+            border: outset;
             background: white;
-            padding-top: 3px;
-            padding-right: 5px;
-            padding-left: 5px;
-            margin: 5px;
         }
         a {
-            text-decoration:none;
+            text-decoration: none;
         }
-        
-        
+
+
+
+       
     
     </style>
 
@@ -67,25 +59,23 @@
 <body>
     <header>
         <nav id="header">
-                <button>
-                    <a href="https://www.google.com.ua/imghp?hl=uk&ogbl">Images</a>
-                </button>
                  <button>
-                     <a href="https://www.google.com/advanced_search?hl=uk&fg=1"</a>
+                     <a href="https://google.com/search">Google search</a>
                  </button>
+
         </nav>
-    </header>
-    <div>
-          <img src="img/google.jpg" />
-    </div>
-    <form action="https://google.com/search">
+</header>
+   
+    <form action="https://google.com/search=img">
         <div>
             <input id="text" type="text" name="q">
         </div>
-        <div id="buttons">
-             <input type="submit" value="Google Search">
-             <input type="submit" value="I'm lucky"
+        <div>
+            <input id="submit" type="submit" value="Advanced Search">
         </div>
-    </form>  
+    </form>
+    </div>
+    
+   
 </body>
 </html>
