@@ -8,6 +8,12 @@
             flex-direction:row
             justify-content:flex-start;
             margin:10px;
+            
+        }
+        header {
+            margin-left: 10px;
+            color: #d93025;
+            
         }
         #header {
             height: 30px;
@@ -44,14 +50,27 @@
         input {
             border: outset;
             background: white;
+            width: 400px;
+        }
+        #submit{
+            display:flex;
+            justify-content:center;
+            padding:50px;
         }
         a {
             text-decoration: none;
         }
-
-
-
-       
+        .sign{
+            width: 200px;
+        }
+        #instructions{
+            display:inline-flex;
+            flex-direction:row;
+        }
+        h1 {
+            border-bottom: 1px solid #777;
+        }
+      
     
     </style>
 
@@ -64,14 +83,41 @@
                  </button>
 
         </nav>
+        <div>
+        <h1> Advanced Search</h1>
+       </div>
 </header>
    
-    <form action="https://google.com/search=img">
-        <div>
-            <input id="text" type="text" name="q">
+    <form action="https://google.com/search" method="get" name="f">
+        <div id="instructions">
+            <div class="sign" style="font-weight:bold">Find pages with:</div>
+            <div style="width: 400px"></div>
+            <div class="sign" style="font-weight:bold">To do this in the search box.</div>
+        </div>
+
         </div>
         <div>
-            <input id="submit" type="submit" value="Advanced Search">
+            <div class="sign">all these words:</div>
+            <input id="text" type="text" name="as_q">
+            <div>Type the important words: tri-colour rat terrier</div>
+        </div>
+        <div>
+            <div class="sign">this exact word or phrase:</div>
+            <input id="text" type="text" name="as_epq">
+            <div>Put exact words in quotes: "rat terrier"</div>
+        </div>
+        <div>
+            <div class="sign">any of these words:</div>
+            <input id="text" type="text" name="as_oq">
+            <div>Type OR between all the words you want: miniature OR standard</div>
+        </div>
+        <div>
+            <div class="sign">none of these words:</div>
+            <input id="text" type="text" name="as_eq">
+            <div>Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</div>
+        </div>
+        <div id="submit">
+            <input type="submit" value="Advanced Search">
         </div>
     </form>
     </div>
